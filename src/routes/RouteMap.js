@@ -4,7 +4,7 @@ import StoreView from "../views/Store/Store";
 
 const RouteMap = [
   {
-    path: "/dashboard",
+    path: "/",
     component: () => DashboardView(),
   },
   {
