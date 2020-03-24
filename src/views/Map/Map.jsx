@@ -1,7 +1,7 @@
 import React from "react";
 import { MainButton } from "../../styledComponents/Buttons/Buttons.styles";
 
-function DashboardView() {
+function MapView() {
   return (
     <div>
       <MainButton>im a dashboard</MainButton>
@@ -9,4 +9,4 @@ function DashboardView() {
   );
 }
 
-export default DashboardView;
+export default MapView;
