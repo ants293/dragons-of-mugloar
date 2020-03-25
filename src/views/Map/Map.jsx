@@ -1,12 +1,8 @@
 import React from "react";
-import { MainButton } from "../../styledComponents/Buttons/Buttons.styles";
+import { Map } from "./Map.Styles";
 
 function MapView() {
-  return (
-    <div>
-      <MainButton>im a dashboard</MainButton>
-    </div>
-  );
+  return <Map></Map>;
 }
 
 export default MapView;
