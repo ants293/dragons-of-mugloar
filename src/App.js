@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import Routes from "./routes/Routes";
 import { Theme } from "./styledComponents/Theme";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle } from "./styledComponents/GlobalStyle";
+import { GlobalStyles } from "./styledComponents/Global.styles";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <BrowserRouter>
           <Routes />
         </BrowserRouter>
-        <GlobalStyle />
+        <GlobalStyles />
       </div>
     </ThemeProvider>
   );

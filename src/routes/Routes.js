@@ -22,6 +22,7 @@ const getRoutes = (providedRouteMap) => {
 const getRoute = (route) => {
   return (
     <Route
+      key={route.path}
       exact
       path={route.path}
       render={(props) => <route.component {...props} />}

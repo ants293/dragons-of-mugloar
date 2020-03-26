@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import mainBgImage from "../assets/images/main-bg.jpg";
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   body, html {
     height: 100%
   }
