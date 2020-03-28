@@ -1,15 +1,13 @@
 import React from "react";
-import { Map } from "./Map.Styles";
+import "./style.scss";
 
 function MapView() {
   return (
-    <Map>
-      <div className="container mx-auto">
-        <div className="illustration_1" />
-        <div className="illustration_2" />
-        <div className="illustration_3" />
-      </div>
-    </Map>
+    <div className="map">
+      <div className="illustration_1" />
+      <div className="illustration_2" />
+      <div className="illustration_3" />
+    </div>
   );
 }
 
