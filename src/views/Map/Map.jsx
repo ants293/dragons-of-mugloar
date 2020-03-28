@@ -1,7 +1,11 @@
 import React from "react";
 import "./style.scss";
 
-function MapView() {
+function MapView(props) {
+  const { actionGameStart } = props;
+
+  actionGameStart();
+
   return (
     <div className="map relative h-full">
       <div className="container relative h-full">
