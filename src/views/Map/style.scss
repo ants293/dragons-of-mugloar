@@ -1,8 +1,7 @@
 @import "../../assets/styles/variables";
 
 .map {
-  position: relative;
-  height: 100%;
+  overflow: hidden;
   background: url('../../assets/images/main-bg.jpg') no-repeat;
   background-size: cover;
   &:before,
@@ -11,38 +10,52 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 500px;
+      width: 500px;
   }
   &:before {
-    left: 0;
+    left: -250px;
+    @media(min-width: 2100px) {
+      left: 0;
+    }
     background-image: url('../../assets/illustrations/trees-left.svg');
     background-position: center right;
   }
   &:after {
-    right: 0;
+    right: -250px;
+    @media(min-width: 2100px) {
+      right: 0;
+    }
     background-image: url('../../assets/illustrations/trees-right.svg');
     background-position: center left;
   }
 }
 
-.illustration_1,
-.illustration_2,
-.illustration_3 {
-  background-size: contain;
-  background-repeat: no-repeat;
+.illustrations {
+  padding-bottom: 200px;
 }
-.illustration_1 {
-  height: 351px;
+
+.illustration__one,
+.illustration__two,
+.illustration__three {
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.illustration__one {
+  height: 364px;
   width: 296px;
   background-image: url('../../assets/illustrations/house-1.svg');
 }
-.illustration_2 {
-  height: 500px;
-  width: 500px;
+.illustration__two {
+  height: 596px;
+  width: 307px;
   background-image: url('../../assets/illustrations/house-2.svg');
 }
-.illustration_3 {
-  height: 300px;
-  width: 300px;
+.illustration__three {
+  height: 120px;
+  width: 160px;
+  margin-left: 320px;
   background-image: url('../../assets/illustrations/noticeboard.svg');
 }
+
+
