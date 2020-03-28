@@ -30,27 +30,32 @@
   }
 }
 
+.illustration__item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: filter .3s linear;
+  &:hover {
+    filter: sepia(1) hue-rotate(-37deg) saturate(9);
+  }
+}
+
 .illustrations {
   padding-bottom: 200px;
 }
 
-.illustration__one,
-.illustration__two,
-.illustration__three {
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: pointer;
-}
 .illustration__one {
   height: 364px;
   width: 296px;
   background-image: url('../../assets/illustrations/house-1.svg');
 }
+
 .illustration__two {
   height: 596px;
   width: 307px;
   background-image: url('../../assets/illustrations/house-2.svg');
 }
+
 .illustration__three {
   height: 120px;
   width: 160px;
