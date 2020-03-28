@@ -1,11 +1,11 @@
-import DashboardView from "../views/Dashboard/Dashboard";
 import TaskboardView from "../views/Taskboard/Taskboard";
 import StoreView from "../views/Store/Store";
+import MapView from "../views/Map/Map";
 
 const RouteMap = [
   {
     path: "/",
-    component: () => DashboardView(),
+    component: () => MapView(),
   },
   {
     path: "/taskboard",
