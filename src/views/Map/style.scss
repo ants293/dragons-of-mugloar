@@ -28,14 +28,21 @@
 .illustration_1,
 .illustration_2,
 .illustration_3 {
-  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .illustration_1 {
+  height: 351px;
+  width: 296px;
   background-image: url('../../assets/illustrations/house-1.svg');
 }
 .illustration_2 {
+  height: 500px;
+  width: 500px;
   background-image: url('../../assets/illustrations/house-2.svg');
 }
 .illustration_3 {
+  height: 300px;
+  width: 300px;
   background-image: url('../../assets/illustrations/noticeboard.svg');
 }
