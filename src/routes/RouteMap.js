@@ -7,6 +7,7 @@ const RouteMap = [
   {
     path: "/",
     component: MapView,
+    private: true,
   },
   {
     path: "/play",
@@ -15,10 +16,12 @@ const RouteMap = [
   {
     path: "/taskboard",
     component: TaskboardView,
+    private: true,
   },
   {
     path: "/shop",
     component: ShopView,
+    private: true,
   },
 ];
 

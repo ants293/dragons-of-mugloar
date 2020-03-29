@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch, withRouter } from "react-router";
 import RouteMap from "./RouteMap";
+import PrivateRoute from "./PrivateRoute/PrivateRoute.container";
 
 const Routes = () => {
   return <Switch>{getRoutes(RouteMap)}</Switch>;
@@ -25,7 +26,13 @@ const getRoute = (route) => {
       key={route.path}
       exact
       path={route.path}
-      render={(props) => <route.component {...props} />}
+      render={(props) => {
+        return route.private ? (
+          <PrivateRoute component={<route.component {...props} />} />
+        ) : (
+          <route.component {...props} />
+        );
+      }}
     />
   );
 };
