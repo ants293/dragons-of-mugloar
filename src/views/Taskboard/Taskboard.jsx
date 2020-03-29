@@ -51,7 +51,7 @@ function TaskboardView({
                     className="main-button"
                     onClick={() =>
                       actionRequestTaskSolving(task.adId).then((taskPassed) =>
-                        handleTaskSolving(taskPassed)
+                        throwTaskSolvingToast(taskPassed)
                       )
                     }
                   >
@@ -67,7 +67,7 @@ function TaskboardView({
   );
 }
 
-const handleTaskSolving = (taskPassed) => {
+const throwTaskSolvingToast = (taskPassed) => {
   if (taskPassed) {
     toast.success("Task was successfully finished");
   } else {

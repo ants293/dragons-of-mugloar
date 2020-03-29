@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./style.scss";
 import InteractionBar from "../../components/InteractionBar/InteractionBar.container";
 import MainViewWrapper from "../../components/Wrapper";
+import {toast} from "react-toastify";
 
 function ShopView({
   actionRequestShopBuy = () => {},
@@ -22,7 +23,7 @@ function ShopView({
           <div
             className="items-list__item"
             key={item.id}
-            onClick={() => buyItem(item.id, actionRequestShopBuy)}
+            onClick={() => buyItem(item.id, actionRequestShopBuy, item.name)}
           >
             <span>{item.name}</span>
             <span>{item.cost}</span>
@@ -33,9 +34,13 @@ function ShopView({
   );
 }
 
-const buyItem = async (id, request) => {
+const buyItem = async (id, request, name) => {
   request(id).then((purchaseResult) => {
-    console.log(purchaseResult);
+    if (purchaseResult) {
+      toast.success(`You just bought a ${name}`);
+    } else {
+      toast.success(`You do not have money for that!`);
+    }
   });
 };
 
