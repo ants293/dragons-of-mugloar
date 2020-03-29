@@ -9,19 +9,19 @@ const mapStateToProps = (state) => {
     relevantStats: {
       lives: {
         value: game.lives,
-        icon: "lives",
+        icon: "heart",
       },
       gold: {
         value: game.gold,
-        icon: "gold",
+        icon: "coins",
       },
       level: {
         value: game.level,
-        icon: "level",
+        icon: "signal",
       },
       score: {
         value: game.score,
-        icon: "score",
+        icon: "star",
       },
     },
   };

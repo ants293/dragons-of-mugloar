@@ -1,4 +1,6 @@
 import React from "react";
+import "./styles.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Infobar(props) {
   const { relevantStats } = props;
@@ -18,8 +20,12 @@ const getStatisticsWithIconsHTML = (stats) => {
   const statisticsItems = [];
 
   for (const key in stats) {
+    console.log(stats[key].icon);
     statisticsItems.push(
-      <div><span className={stats[key].icon} />{stats[key].value}</div>
+      <div>
+        <FontAwesomeIcon icon={stats[key].icon} />
+        {stats[key].value}
+      </div>
     );
   }
   return statisticsItems;
