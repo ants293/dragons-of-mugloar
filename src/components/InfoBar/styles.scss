@@ -2,6 +2,16 @@
 
 .infobar {
   background-color: rgba($mainColor, .6);
-  padding: 10px 0;
+  padding: 16px 0;
   border-bottom: 1px solid $mainColor;
+}
+
+.infobar__icons {
+  font-weight: 600;
+}
+
+.infobar__icon {
+  & > path {
+    color: $secondaryColor;
+  }
 }

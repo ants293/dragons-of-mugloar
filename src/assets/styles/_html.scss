@@ -1,4 +1,7 @@
-* {
+@import "./variables";
+
+p,
+span {
   color: $mainFontColor;
 }
 
@@ -6,6 +9,7 @@
 html,
 body {
   height: 100%;
+  font-family: $mainFont;
 }
 
 body {

@@ -20,12 +20,14 @@ const getStatisticsWithIconsHTML = (stats) => {
   const statisticsItems = [];
 
   for (const key in stats) {
-    statisticsItems.push(
-      <div key={`${stats[key].value}-${stats[key].icon}`} className='ml-2'>
-        <FontAwesomeIcon icon={stats[key].icon} className="mr-1" />
-        {stats[key].value}
-      </div>
-    );
+    if (stats.hasOwnProperty(key)) {
+      statisticsItems.push(
+        <div key={`${stats[key].value}-${stats[key].icon}`} className='ml-2'>
+          <FontAwesomeIcon icon={stats[key].icon} className="infobar__icon mr-1" />
+          {stats[key].value}
+        </div>
+      );
+    }
   }
   return statisticsItems;
 };

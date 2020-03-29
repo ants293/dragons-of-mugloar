@@ -13,21 +13,31 @@
   overflow-y: auto;
 }
 
+.items-list__label {
+  color: $secondaryColor;
+  transition: color ease .3s;
+}
+
 .items-list__item {
   display: flex;
   margin-bottom: 8px;
-  padding: 8px 12px;
+  padding: 14px 12px;
   justify-content: space-between;
-  color: $mainFontColor;
-  border: 1px solid $mainFontColor;
+  color: $secondaryColor;
+  border: 2px solid $secondaryColor;
   border-radius: $mainBorderRadius;
   font-weight: 600;
   font-size: $fontSizeSemiLarge;
   text-align: left;
   cursor: pointer;
-  transition: color ease .2s, border-color ease .2s;
-  &:hover {
-    color: $secondaryColor;
-    border-color: $secondaryColor;
+  transition: background-color ease .3s;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $secondaryColor;
+    .items-list__label {
+      color: #fff;
+    }
   }
 }
+

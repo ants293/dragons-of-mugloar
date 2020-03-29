@@ -17,3 +17,23 @@
     background-color: $disabledBgColor;
   }
 }
+
+.main-button {
+  padding: 7px 25px;
+  border-radius: $mainBorderRadius;
+  font-size: $fontSizeSemiMedium;
+  border: 2px solid $secondaryColor;
+  color: $secondaryColor;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color ease .3s, background-color ease .3s;
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $secondaryColor;
+    color: #fff;
+  }
+}

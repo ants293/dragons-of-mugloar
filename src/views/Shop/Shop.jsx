@@ -25,8 +25,8 @@ function ShopView({
             key={item.id}
             onClick={() => buyItem(item.id, actionRequestShopBuy, item.name)}
           >
-            <span>{item.name}</span>
-            <span>{item.cost}</span>
+            <span className="items-list__label">{item.name}</span>
+            <span className="items-list__label">{item.cost}</span>
           </div>
         ))}
       </div>
@@ -39,7 +39,7 @@ const buyItem = async (id, request, name) => {
     if (purchaseResult) {
       toast.success(`You just bought a ${name}`);
     } else {
-      toast.success(`You do not have money for that!`);
+      toast.error(`You do not have money for that!`);
     }
   });
 };

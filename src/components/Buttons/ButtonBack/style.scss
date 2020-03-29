@@ -1,0 +1,30 @@
+@import "../../../assets/styles/variables";
+
+.back-button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  &:hover,
+  &:focus,
+  &:active {
+    .back-button__icon {
+      transform: translateX(-5px);
+    }
+  }
+}
+
+.back-button__icon,
+.back-button__label {
+  font-size: $fontSizeSemiLarge;
+  color: $secondaryColor;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.back-button__icon {
+  transition: transform ease .3s;
+  & > path {
+    color: $secondaryColor;
+  }
+}
