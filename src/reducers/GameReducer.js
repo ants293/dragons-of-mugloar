@@ -1,4 +1,4 @@
-import { PLAYER_START_GAME } from "../../types/GameTypes";
+import { PLAYER_START_GAME, UPDATE_GAME_INFO } from "../types/GameTypes";
 
 const INITIAL_STATE = {
   gameId: "",
@@ -13,6 +13,15 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case PLAYER_START_GAME:
+      return {
+        ...state,
+        ...action.payload,
+      };
+    case UPDATE_GAME_INFO:
+      console.log({
+        ...state,
+        ...action.payload,
+      });
       return {
         ...state,
         ...action.payload,

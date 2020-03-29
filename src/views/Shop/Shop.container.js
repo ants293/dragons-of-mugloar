@@ -1,14 +1,20 @@
 import { connect } from "react-redux";
 import Component from "./Shop";
-import { actionRequestShopList } from "../../actions/ShopActions";
+import {
+  actionRequestShopBuy,
+  actionRequestShopList,
+} from "../../actions/ShopActions";
 
 const mapStateToProps = (state) => {
-  return {};
+  return {
+    shop: state.shop,
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     actionRequestShopList: () => actionRequestShopList(dispatch),
+    actionRequestShopBuy: (id) => actionRequestShopBuy(dispatch, id),
   };
 };
 

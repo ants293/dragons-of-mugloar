@@ -1,1 +1,2 @@
 export const PLAYER_START_GAME = "PLAYER_START_GAME";
+export const UPDATE_GAME_INFO = "UPDATE_GAME_INFO";
