@@ -12,7 +12,6 @@ export const actionRequestTaskList = async (dispatch) => {
       type: REQUEST_TASK_LIST_SUCCESS,
       payload: data,
     });
-    console.log("111");
   } catch (err) {
     console.log(err);
   }

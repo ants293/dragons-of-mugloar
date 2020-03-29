@@ -17,7 +17,7 @@ function TaskboardView({
       <div className="col-12">
         <div className="row items-wall flex-wrap">
           {tasks.taskList.map((task) => (
-            <div className="col-4 task-card">
+            <div key={task.adId} className="col-4 task-card">
               <div className="items-wall__item">
                 <div className="task-card__header mb-2">
                   <span className="task-card__header-item">

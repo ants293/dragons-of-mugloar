@@ -1,6 +1,15 @@
+@import './variables.scss';
+
+.Toastify__toast {
+  border-color: transparent!important;
+  border-radius: $mainBorderRadius!important;
+  font-weight: 600!important;
+}
+
 .Toastify__toast--success {
-  border: 1px solid #8a6222!important;
-  border-radius: 8px!important;;
   background-color: #b1710c!important;;
-  font-weight: 600!important;;
+}
+
+.Toastify__toast--error {
+  background-color: $secondaryColor!important;
 }

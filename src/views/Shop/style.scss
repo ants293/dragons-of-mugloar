@@ -18,10 +18,16 @@
   margin-bottom: 8px;
   padding: 8px 12px;
   justify-content: space-between;
-  border: 1px solid $mainColor;
+  color: $mainFontColor;
+  border: 1px solid $mainFontColor;
   border-radius: $mainBorderRadius;
   font-weight: 600;
   font-size: $fontSizeSemiLarge;
   text-align: left;
   cursor: pointer;
+  transition: color ease .2s, border-color ease .2s;
+  &:hover {
+    color: $secondaryColor;
+    border-color: $secondaryColor;
+  }
 }

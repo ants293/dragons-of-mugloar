@@ -15,7 +15,7 @@ function App() {
   return (
     <Router history={history}>
       <ToastContainer
-        autoClose={3000}
+        autoClose={3000000}
         position="top-center"
         className="toast-container"
       />

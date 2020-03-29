@@ -21,8 +21,8 @@ const getStatisticsWithIconsHTML = (stats) => {
 
   for (const key in stats) {
     statisticsItems.push(
-      <div key={`${stats[key].value}-${stats[key].icon}`}>
-        <FontAwesomeIcon icon={stats[key].icon} />
+      <div key={`${stats[key].value}-${stats[key].icon}`} className='ml-2'>
+        <FontAwesomeIcon icon={stats[key].icon} className="mr-1" />
         {stats[key].value}
       </div>
     );

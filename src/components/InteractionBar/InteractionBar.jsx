@@ -7,7 +7,7 @@ function InteractionBar({ title = "", redirect = () => {} }) {
       <button className="back-button" onClick={() => redirect("/")}>
         back
       </button>
-      <div className="interaction-bar__title">{title}</div>
+      <h1 className="interaction-bar__title">{title}</h1>
     </div>
   );
 }

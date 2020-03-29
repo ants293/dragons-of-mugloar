@@ -3,5 +3,12 @@
 .interaction-bar {
   padding-bottom: 10px;
   margin-bottom: 50px;
-  border-bottom: 1px solid $mainColor;
+  border-bottom: 1px solid $mainFontColor;
+}
+
+.interaction-bar__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: $fontSizeMainTitle;
+  color: $mainFontColor;
 }
