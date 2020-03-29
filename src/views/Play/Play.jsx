@@ -1,18 +1,39 @@
 import React from "react";
 
 function PlayView({
-  gameId = "",
+  game = null,
   actionPurgeGameData = () => {},
   actionRequestStartGame = () => {},
   redirect = () => {},
 }) {
+  console.log(game);
   return (
-    <div>
-      <button onClick={() => onNewGame(actionPurgeGameData, actionRequestStartGame, redirect)}>New Game</button>
-      <button>Continue</button>
+    <div className="container h-full">
+      <div className="h-full d-flex justify-content-center align-items-center flex-column">
+        <button
+          className="menu-button"
+          onClick={() =>
+            onNewGame(actionPurgeGameData, actionRequestStartGame, redirect)
+          }
+        >
+          New Game
+        </button>
+        <button
+          className={`menu-button ${setDisabled(game)}`}
+          onClick={() => redirect("/")}
+        >
+          Continue
+        </button>
+      </div>
     </div>
   );
 }
+
+const setDisabled = (game) => {
+  if (!game || !game.gameId) {
+    return "menu-button--disabled";
+  }
+};
 
 const onNewGame = (deleteGame, newGame, redirect) => {
   deleteGame();

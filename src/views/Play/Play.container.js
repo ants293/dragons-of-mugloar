@@ -7,7 +7,7 @@ import {
 
 const mapStateToProps = (state) => {
   return {
-    gameId: state.game.gameId,
+    game: state.game,
   };
 };
 

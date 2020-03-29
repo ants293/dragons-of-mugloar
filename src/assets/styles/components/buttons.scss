@@ -1,0 +1,19 @@
+@import "../../assets/styles/variables";
+
+.menu-button {
+  padding: 15px 10px;
+  margin-bottom: 15px;
+  min-width: 210px;
+  background-color: $mainBgColor;
+  text-transform: uppercase;
+  border: 1px solid $mainColor;
+  border-radius: $mainBorderRadius;
+  font-size: $fontSizeLarge;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  &.menu-button--disabled {
+    color: $disabledColor;
+    background-color: $disabledBgColor;
+  }
+}

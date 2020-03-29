@@ -1,6 +1,12 @@
 $mainColor: #8a6222;
+$disabledColor: #d6d3cf;
+$mainBgColor: rgba($mainColor, .6);
+$disabledBgColor: rgba($disabledColor, .4);
+
 $mainBorderRadius: 8px;
 
+
+$fontSizeLarge: 24px;
 $fontSizeSemiLarge: 21px;
 $fontSizeSemiMedium: 18px;
 $fontSizeMedium: 16px;
