@@ -7,10 +7,20 @@ function TaskboardView({
   actionRequestTaskList = () => {},
   actionRequestTaskSolving = () => {},
   tasks = { taskList: [] },
+  lives = 3,
+  redirect = () => {},
+  purgePlayerInfo = () => {},
 }) {
   useEffect(() => {
     actionRequestTaskList();
   }, []);
+
+  useEffect(() => {
+    if (lives === 0) {
+      purgePlayerInfo();
+      redirect("/lose");
+    }
+  });
 
   return (
     <MainViewWrapper title="Available jobs">

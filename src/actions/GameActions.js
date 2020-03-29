@@ -15,7 +15,7 @@ export const actionRequestStartGame = async (dispatch) => {
   }
 };
 
-export const actionPurgeGameData = async (dispatch) => {
+export const actionPurgeGameData = (dispatch) => {
   dispatch({
     type: PURGE_GAME_INFO,
   });

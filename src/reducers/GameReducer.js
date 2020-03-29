@@ -1,4 +1,8 @@
-import {PLAYER_START_GAME, PURGE_GAME_INFO, UPDATE_GAME_INFO} from "../types/GameTypes";
+import {
+  PLAYER_START_GAME,
+  PURGE_GAME_INFO,
+  UPDATE_GAME_INFO,
+} from "../types/GameTypes";
 
 const INITIAL_STATE = {
   gameId: "",
@@ -11,6 +15,8 @@ const INITIAL_STATE = {
 };
 
 export default (state = INITIAL_STATE, action) => {
+  console.log(action.type);
+
   switch (action.type) {
     case PLAYER_START_GAME:
       return {
@@ -24,6 +30,7 @@ export default (state = INITIAL_STATE, action) => {
       };
     case PURGE_GAME_INFO:
       return {
+        ...state,
         ...INITIAL_STATE,
       };
     default:
