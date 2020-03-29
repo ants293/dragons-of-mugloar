@@ -3,3 +3,8 @@ html,
 body {
   height: 100%;
 }
+
+body {
+  background: url('../../assets/images/main-bg.jpg') no-repeat;
+  background-size: cover;
+}

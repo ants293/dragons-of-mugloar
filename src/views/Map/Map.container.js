@@ -9,6 +9,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     actionGameStart: () => actionStartGame(dispatch),
+    redirect: (path) => dispatch({ to: path, type: "ROUTE" }),
   };
 };
 

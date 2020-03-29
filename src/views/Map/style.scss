@@ -2,8 +2,6 @@
 
 .map {
   overflow: hidden;
-  background: url('../../assets/images/main-bg.jpg') no-repeat;
-  background-size: cover;
   &:before,
   &:after {
     content: "";
