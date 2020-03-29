@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./style.scss";
-import MainViewWrapper from "../../components/Wrapper";
+import MainViewWrapper from "../../components/Wrapper/Wrapper";
 import { toast } from "react-toastify";
 
 function TaskboardView({

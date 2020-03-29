@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import InteractionBar from "./InteractionBar/InteractionBar.container";
-import Infobar from "./InfoBar/Infobar.container";
+import InteractionBar from "../InteractionBar/InteractionBar.container";
+import Infobar from "../InfoBar/Infobar.container";
 
 function MainViewWrapper({ children = () => {}, title = "" }) {
   return (
