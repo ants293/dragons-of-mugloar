@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./style.scss";
 import MainViewWrapper from "../../components/Wrapper";
+import { toast } from "react-toastify";
 
 function TaskboardView({
   actionRequestTaskList = () => {},
@@ -46,7 +47,16 @@ function TaskboardView({
                 </div>
                 <div className="task-card__content mb-3">{task.message}</div>
                 <div className="task-card__footer">
-                  <button className="main-button" onClick={() => actionRequestTaskSolving(task.adId)}>Do it!</button>
+                  <button
+                    className="main-button"
+                    onClick={() =>
+                      actionRequestTaskSolving(task.adId).then((taskPassed) =>
+                        handleTaskSolving(taskPassed)
+                      )
+                    }
+                  >
+                    Do it!
+                  </button>
                 </div>
               </div>
             </div>
@@ -56,5 +66,13 @@ function TaskboardView({
     </MainViewWrapper>
   );
 }
+
+const handleTaskSolving = (taskPassed) => {
+  if (taskPassed) {
+    toast.success("Task was successfully finished");
+  } else {
+    toast.error("You messed up. -1 HP.");
+  }
+};
 
 export default TaskboardView;

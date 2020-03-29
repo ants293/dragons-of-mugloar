@@ -28,6 +28,9 @@ export const actionRequestTaskSolving = async (dispatch, id) => {
     });
 
     actionRequestTaskList(dispatch);
+
+    return data.success;
+
   } catch (err) {
     console.log(err);
   }
