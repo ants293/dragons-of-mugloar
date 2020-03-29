@@ -4,6 +4,7 @@ import MainViewWrapper from "../../components/Wrapper";
 
 function TaskboardView({
   actionRequestTaskList = () => {},
+  actionRequestTaskSolving = () => {},
   tasks = { taskList: [] },
 }) {
   useEffect(() => {
@@ -45,7 +46,7 @@ function TaskboardView({
                 </div>
                 <div className="task-card__content mb-3">{task.message}</div>
                 <div className="task-card__footer">
-                  <button className="main-button">Do it!</button>
+                  <button className="main-button" onClick={() => actionRequestTaskSolving(task.adId)}>Do it!</button>
                 </div>
               </div>
             </div>

@@ -1,6 +1,9 @@
 import { connect } from "react-redux";
 import Component from "./Taskboard";
-import { actionRequestTaskList } from "../../actions/TaskActions";
+import {
+  actionRequestTaskList,
+  actionRequestTaskSolving,
+} from "../../actions/TaskActions";
 
 const mapStateToProps = (state) => {
   return {
@@ -11,6 +14,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     actionRequestTaskList: () => actionRequestTaskList(dispatch),
+    actionRequestTaskSolving: (id) => actionRequestTaskSolving(dispatch, id),
   };
 };
 

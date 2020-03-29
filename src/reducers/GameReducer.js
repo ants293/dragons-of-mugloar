@@ -18,10 +18,6 @@ export default (state = INITIAL_STATE, action) => {
         ...action.payload,
       };
     case UPDATE_GAME_INFO:
-      console.log({
-        ...state,
-        ...action.payload,
-      });
       return {
         ...state,
         ...action.payload,

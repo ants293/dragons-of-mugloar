@@ -1,4 +1,4 @@
-import {REQUEST_TASK_LIST_SUCCESS} from "../types/TaskTypes";
+import { REQUEST_TASK_LIST_SUCCESS } from "../types/TaskTypes";
 
 const INITIAL_STATE = {
   taskList: [],
