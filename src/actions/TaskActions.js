@@ -12,6 +12,7 @@ export const actionRequestTaskList = async (dispatch) => {
       type: REQUEST_TASK_LIST_SUCCESS,
       payload: data,
     });
+    console.log("111");
   } catch (err) {
     console.log(err);
   }
@@ -25,6 +26,8 @@ export const actionRequestTaskSolving = async (dispatch, id) => {
       type: UPDATE_GAME_INFO,
       payload: data,
     });
+
+    actionRequestTaskList(dispatch);
   } catch (err) {
     console.log(err);
   }
