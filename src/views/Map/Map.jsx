@@ -1,7 +1,6 @@
 import React from "react";
 import "./style.scss";
 import Infobar from "../../components/InfoBar/Infobar.container";
-import { redirectTo } from "../../shared/Utilities";
 
 function MapView(props) {
   const { actionRequestStartGame, redirect } = props;
