@@ -1,7 +1,7 @@
 import React from "react";
 
-function StoreView() {
+function ShopView() {
   return <div>im a store</div>;
 }
 
-export default StoreView;
+export default ShopView;

@@ -1,5 +1,5 @@
 import TaskboardView from "../views/Taskboard/Taskboard";
-import StoreView from "../views/Store/Store";
+import ShopView from "../views/Shop/Shop.container";
 import MapView from "../views/Map/Map.container";
 
 const RouteMap = [
@@ -13,7 +13,7 @@ const RouteMap = [
   },
   {
     path: "/store",
-    component: () => StoreView(),
+    component: () => ShopView,
   },
 ];
 
