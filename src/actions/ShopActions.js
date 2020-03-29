@@ -2,7 +2,7 @@ import { post } from "axios";
 import { PLAYER_START_GAME } from "../types/GameTypes";
 import { API_KEY } from "../config";
 
-export const actionRequestStartGame = async (dispatch) => {
+export const actionShopList = async (dispatch) => {
   try {
     const { data } = await post(`${API_KEY}/game/start`);
 

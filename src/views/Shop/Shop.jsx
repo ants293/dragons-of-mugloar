@@ -1,7 +1,9 @@
 import React from "react";
 
 function ShopView() {
-  return <div>im a store</div>;
+  return <div className="container">
+
+  </div>;
 }
 
 export default ShopView;

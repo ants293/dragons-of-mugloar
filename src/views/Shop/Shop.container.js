@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Component from "./Shop";
-import { actionStartGame } from "../../actions/GameActions";
+import { actionRequestStartGame } from "../../actions/GameActions";
 
 const mapStateToProps = (state) => {
   return {};
@@ -8,7 +8,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    actionGameStart: () => actionStartGame(dispatch),
+    actionRequestStartGame: () => actionRequestStartGame(dispatch),
   };
 };
 

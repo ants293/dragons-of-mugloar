@@ -4,9 +4,9 @@ import Infobar from "../../components/InfoBar/Infobar.container";
 import { redirectTo } from "../../shared/Utilities";
 
 function MapView(props) {
-  const { actionGameStart, redirect } = props;
+  const { actionRequestStartGame, redirect } = props;
 
-  actionGameStart();
+  actionRequestStartGame();
 
   return (
     <div className="map relative h-full">

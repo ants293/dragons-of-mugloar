@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Component from "./Infobar";
-import { actionStartGame } from "../../actions/GameActions";
+import { actionRequestStartGame } from "../../actions/GameActions";
 
 const mapStateToProps = (state) => {
   const { game } = state;
@@ -29,7 +29,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    actionGameStart: () => actionStartGame(dispatch),
+    actionRequestStartGame: () => actionRequestStartGame(dispatch),
   };
 };
 
