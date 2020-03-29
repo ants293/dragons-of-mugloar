@@ -1,13 +1,14 @@
 import { post } from "axios";
-import { PLAYER_START_GAME } from "../types/GameTypes";
 import { API_KEY } from "../config";
+import { REQUEST_SHOP_LIST } from "../types/ShopTypes";
+import { gameID } from "../shared/Utilities";
 
-export const actionShopList = async (dispatch) => {
+export const actionRequestShopList = async (dispatch) => {
   try {
-    const { data } = await post(`${API_KEY}/game/start`);
+    const { data } = await post(`${API_KEY}/${gameID}/shop`);
 
     dispatch({
-      type: PLAYER_START_GAME,
+      type: REQUEST_SHOP_LIST,
       payload: data,
     });
   } catch (err) {

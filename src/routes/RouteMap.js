@@ -12,8 +12,8 @@ const RouteMap = [
     component: () => TaskboardView(),
   },
   {
-    path: "/store",
-    component: () => ShopView,
+    path: "/shop",
+    component: ShopView,
   },
 ];
 

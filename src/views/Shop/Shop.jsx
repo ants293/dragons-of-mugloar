@@ -1,9 +1,11 @@
 import React from "react";
 
-function ShopView() {
-  return <div className="container">
+function ShopView(props) {
+  const { actionRequestShopList } = props;
 
-  </div>;
+  actionRequestShopList();
+
+  return (<div className="container"></div>);
 }
 
 export default ShopView;

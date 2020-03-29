@@ -1,0 +1,1 @@
+export const REQUEST_SHOP_LIST = "REQUEST_SHOP_LIST";
