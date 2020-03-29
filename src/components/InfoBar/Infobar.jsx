@@ -20,7 +20,6 @@ const getStatisticsWithIconsHTML = (stats) => {
   const statisticsItems = [];
 
   for (const key in stats) {
-    console.log(stats[key].icon);
     statisticsItems.push(
       <div>
         <FontAwesomeIcon icon={stats[key].icon} />
