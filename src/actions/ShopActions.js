@@ -19,7 +19,7 @@ export const actionRequestShopList = async (dispatch) => {
 
 export const actionRequestShopBuy = async (dispatch, id) => {
   try {
-    const { data } = await post(`${API_KEY}//shop/buy/${id}`);
+    const { data } = await post(`${API_KEY}/${getGameId()}/shop/buy/${id}`);
 
     dispatch({
       type: UPDATE_GAME_INFO,
