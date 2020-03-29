@@ -1,15 +1,15 @@
-import { REQUEST_SHOP_LIST_SUCCESS } from "../types/ShopTypes";
+import {REQUEST_TASK_LIST_SUCCESS} from "../types/TaskTypes";
 
 const INITIAL_STATE = {
-  items: [],
+  taskList: [],
 };
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case REQUEST_SHOP_LIST_SUCCESS:
+    case REQUEST_TASK_LIST_SUCCESS:
       return {
         ...state,
-        items: [...action.payload],
+        taskList: [...action.payload],
       };
     default:
       return state;

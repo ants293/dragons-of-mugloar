@@ -1,6 +1,6 @@
 import { get, post } from "axios";
 import { API_KEY } from "../config";
-import { REQUEST_SHOP_LIST } from "../types/ShopTypes";
+import {REQUEST_SHOP_LIST, REQUEST_SHOP_LIST_SUCCESS} from "../types/ShopTypes";
 import { UPDATE_GAME_INFO } from "../types/GameTypes";
 import { gameID } from "../shared/Utilities";
 
@@ -9,7 +9,7 @@ export const actionRequestShopList = async (dispatch) => {
     const { data } = await get(`${API_KEY}/${gameID}/shop`);
 
     dispatch({
-      type: REQUEST_SHOP_LIST,
+      type: REQUEST_SHOP_LIST_SUCCESS,
       payload: data,
     });
   } catch (err) {

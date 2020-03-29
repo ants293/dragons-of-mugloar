@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./style.scss";
 import MainViewWrapper from "../../components/Wrapper";
 
-function TaskboardView() {
+function TaskboardView({ actionRequestTaskList = () => {}, tasks = [] }) {
+  useEffect(() => {
+    actionRequestTaskList();
+  }, []);
+
+  console.log(tasks);
+
   return (
     <MainViewWrapper title="Available jobs">
       <div className="col-5">
