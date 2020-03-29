@@ -12,30 +12,45 @@ function TaskboardView({
 
   return (
     <MainViewWrapper title="Available jobs">
-      <div className="col-12 items-wall d-flex flex-wrap">
-        {tasks.taskList.map((task) => (
-          <div className="items-wall__item task-card">
-            <div className="task-card__header">
-              <span className="task-card__header-item">
-                <span>Reward:</span>
-                {task.reward}
-              </span>
-              <span className="task-card__header-item">
-                <span>Difficulty:</span>
-                {task.probability}
-              </span>
-              <span className="task-card__header-item">
-                <span>Expires in:</span>
-                {task.expiresIn}
-              </span>
+      <div className="col-12">
+        <div className="row items-wall flex-wrap">
+          {tasks.taskList.map((task) => (
+            <div className="col-4 task-card">
+              <div className="items-wall__item">
+                <div className="task-card__header mb-2">
+                  <span className="task-card__header-item">
+                    <span className="bold mr-1 task-card__header-col">
+                      Reward:
+                    </span>
+                    <span className="task-card__header-col">
+                      {task.reward} gold
+                    </span>
+                  </span>
+                  <span className="task-card__header-item">
+                    <span className="bold mr-1 task-card__header-col">
+                      Difficulty:
+                    </span>
+                    <span className="task-card__header-col">
+                      {task.probability}
+                    </span>
+                  </span>
+                  <span className="task-card__header-item">
+                    <span className="bold mr-1 task-card__header-col">
+                      Expires in:
+                    </span>
+                    <span className="task-card__header-col">
+                      {task.expiresIn} turns
+                    </span>
+                  </span>
+                </div>
+                <div className="task-card__content mb-3">{task.message}</div>
+                <div className="task-card__footer">
+                  <button className="main-button">Do it!</button>
+                </div>
+              </div>
             </div>
-            <div className="task-card__content">{task.message}</div>
-            <div className="task-card__footer">
-              <button className="main-button">Do it!</button>
-            </div>
-          </div>
-        ))}
-        <div>list here</div>
+          ))}
+        </div>
       </div>
     </MainViewWrapper>
   );

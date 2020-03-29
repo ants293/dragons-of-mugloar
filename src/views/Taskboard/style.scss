@@ -1,0 +1,33 @@
+@import "../../assets/styles/variables";
+
+.task-card__content {
+  font-size: $fontSizeSemiLarge;
+}
+
+.task-card__footer {
+  text-align: center;
+}
+
+.items-wall__item {
+  margin-bottom: 10px;
+  padding: 18px 15px;
+  border: 1px solid black;
+  border-radius: $mainBorderRadius;
+}
+
+.task-card__header {
+  display: table;
+}
+
+.task-card__header-item {
+  display: table-row;
+  font-size: $fontSizeSemiMedium;
+  white-space: nowrap;
+}
+
+.task-card__header-col {
+  display: table-cell;
+  &:first-child {
+    padding-right: 5px;
+  }
+}
