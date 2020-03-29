@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import "./style.scss";
 
 function ShopView({
   actionRequestShopBuy = () => {},
@@ -10,20 +11,24 @@ function ShopView({
   }, []);
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-5">Image of a guy</div>
-        <div className="col-7 items-list">
-          {shop.items.map((item) => (
-            <div
-              className="items-list__item"
-              key={item.id}
-              onClick={() => buyItem(item.id, actionRequestShopBuy)}
-            >
-              <span>{item.name}</span>
-              <span>{item.cost}</span>
-            </div>
-          ))}
+    <div className="container h-full">
+      <div className="d-flex align-items-center justify-content-center h-full">
+        <div className="row w-full">
+          <div className="col-5">
+            <div className="shopkeeper-illustration"></div>
+          </div>
+          <div className="col-7 items-list">
+            {shop.items.map((item) => (
+              <div
+                className="items-list__item"
+                key={item.id}
+                onClick={() => buyItem(item.id, actionRequestShopBuy)}
+              >
+                <span>{item.name}</span>
+                <span>{item.cost}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
