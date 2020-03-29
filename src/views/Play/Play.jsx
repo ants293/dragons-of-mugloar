@@ -6,7 +6,6 @@ function PlayView({
   actionRequestStartGame = () => {},
   redirect = () => {},
 }) {
-  console.log(game);
   return (
     <div className="container h-full">
       <div className="h-full d-flex justify-content-center align-items-center flex-column">
