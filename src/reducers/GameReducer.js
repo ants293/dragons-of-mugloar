@@ -1,4 +1,4 @@
-import { PLAYER_START_GAME, UPDATE_GAME_INFO } from "../types/GameTypes";
+import {PLAYER_START_GAME, PURGE_GAME_INFO, UPDATE_GAME_INFO} from "../types/GameTypes";
 
 const INITIAL_STATE = {
   gameId: "",
@@ -21,6 +21,10 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...state,
         ...action.payload,
+      };
+    case PURGE_GAME_INFO:
+      return {
+        ...INITIAL_STATE,
       };
     default:
       return state;

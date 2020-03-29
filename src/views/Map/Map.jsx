@@ -3,9 +3,7 @@ import "./style.scss";
 import Infobar from "../../components/InfoBar/Infobar.container";
 
 function MapView(props) {
-  const { actionRequestStartGame, redirect } = props;
-
-  actionRequestStartGame();
+  const { redirect } = props;
 
   return (
     <div className="map relative h-full">

@@ -1,12 +1,12 @@
 import { get, post } from "axios";
 import { API_KEY } from "../config";
-import { gameID } from "../shared/Utilities";
+import { getGameId } from "../shared/Utilities";
 import { REQUEST_TASK_LIST_SUCCESS } from "../types/TaskTypes";
 import { UPDATE_GAME_INFO } from "../types/GameTypes";
 
 export const actionRequestTaskList = async (dispatch) => {
   try {
-    const { data } = await get(`${API_KEY}/${gameID}/messages`);
+    const { data } = await get(`${API_KEY}/${getGameId()}/messages`);
 
     dispatch({
       type: REQUEST_TASK_LIST_SUCCESS,
@@ -19,7 +19,7 @@ export const actionRequestTaskList = async (dispatch) => {
 
 export const actionRequestTaskSolving = async (dispatch, id) => {
   try {
-    const { data } = await post(`${API_KEY}/${gameID}/solve/${id}`);
+    const { data } = await post(`${API_KEY}/${getGameId()}/solve/${id}`);
 
     dispatch({
       type: UPDATE_GAME_INFO,

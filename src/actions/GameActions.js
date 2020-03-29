@@ -1,5 +1,5 @@
 import { post } from "axios";
-import { PLAYER_START_GAME } from "../types/GameTypes";
+import { PLAYER_START_GAME, PURGE_GAME_INFO } from "../types/GameTypes";
 import { API_KEY } from "../config";
 
 export const actionRequestStartGame = async (dispatch) => {
@@ -13,4 +13,10 @@ export const actionRequestStartGame = async (dispatch) => {
   } catch (err) {
     console.log(err);
   }
+};
+
+export const actionPurgeGameData = async (dispatch) => {
+  dispatch({
+    type: PURGE_GAME_INFO,
+  });
 };
