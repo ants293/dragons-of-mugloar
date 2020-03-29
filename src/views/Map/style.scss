@@ -8,7 +8,10 @@
     position: absolute;
     top: 0;
     bottom: 0;
+    width: 300px;
+    @media(min-width: 1600px) {
       width: 500px;
+    }
   }
   &:before {
     left: -250px;

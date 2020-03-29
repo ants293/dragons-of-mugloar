@@ -23,7 +23,7 @@ function TaskboardView({
   });
 
   return (
-    <MainViewWrapper title="Available jobs">
+    <MainViewWrapper title="Noticeboard">
       <div className="col-12">
         <div className="row items-wall flex-wrap">
           {tasks.taskList.map((task) => (

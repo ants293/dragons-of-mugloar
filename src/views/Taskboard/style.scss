@@ -15,10 +15,14 @@
 }
 
 .items-wall__item {
-  margin-bottom: 25px;
+  height: 100%;
   padding: 18px 15px;
   border: 2px solid $secondaryColor;
   border-radius: $mainBorderRadius;
+}
+
+.task-card {
+  margin-bottom: 30px;
 }
 
 .task-card__header {
