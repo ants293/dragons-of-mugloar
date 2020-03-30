@@ -23,7 +23,10 @@ function MapView({ redirect }) {
             className="illustration__item illustration__three align-self-end"
             onClick={() => redirect("/taskboard")}
           />
-          <div className="illustration__item illustration__two" />
+          <div
+            className="illustration__item illustration__two"
+            onClick={() => redirect("/tavern")}
+          />
         </div>
       </div>
     </div>
