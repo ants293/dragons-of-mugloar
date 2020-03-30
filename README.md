@@ -3,6 +3,10 @@ A poormans RPG made with React and Redux state management.
 
 ## Available Scripts
 
+### `npm install`
+
+Install all project dependencies.
+
 ### `npm start`
 
 Runs the app in the development mode.<br />
