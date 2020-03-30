@@ -14,7 +14,7 @@ function MapView({ redirect }) {
       <Infobar />
 
       <div className="container relative h-full">
-        <div className="illustrations d-flex h-full flex-wrap align-content-end justify-content-between">
+        <div className="illustrations d-flex h-full flex-wrap align-content-lg-end justify-content-lg-between">
           <div
             className="illustration__item illustration__one"
             onClick={() => redirect("/shop")}

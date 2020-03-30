@@ -13,7 +13,7 @@ function MainViewWrapper({ children, title = "" }) {
     <Fragment>
       <Infobar />
       <div className="container h-full">
-        <div className="d-flex align-items-center justify-content-center h-full">
+        <div className="d-flex align-items-xl-center justify-content-xl-center h-full">
           <div className="row w-full">
             <div className="col-12">
               <InteractionBar title={title} />

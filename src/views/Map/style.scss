@@ -1,7 +1,7 @@
 @import "../../assets/styles/variables";
 
 .map {
-  overflow: hidden;
+  overflow-x: hidden;
   &:before,
   &:after {
     content: "";
@@ -60,6 +60,8 @@
 .illustration__three {
   height: 120px;
   width: 160px;
-  margin-left: 320px;
+  @media(min-width: 1200px) {
+    margin-left: 320px;
+  }
   background-image: url("../../assets/illustrations/noticeboard.svg");
 }

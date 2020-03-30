@@ -13,7 +13,7 @@ TaskCard.propTypes = {
 
 function TaskCard({ task, onTaskClick }) {
   return (
-    <div className="col-4 task-card">
+    <div className="col-12 col-sm-6 col-lg-4 task-card">
       <div className="items-wall__item">
         <div className="task-card__header mb-2">
           <span className="task-card__header-item">

@@ -11,7 +11,7 @@ InteractionBar.propTypes = {
 
 function InteractionBar({ title = "", redirect }) {
   return (
-    <div className="interaction-bar d-flex justify-content-between align-items-baseline">
+    <div className="interaction-bar d-flex justify-content-between align-items-baseline mt-4 mt-lg-4">
       <ButtonBack onButtonPress={() => redirect("/")} />
 
       <h1 className="interaction-bar__title">{title}</h1>
