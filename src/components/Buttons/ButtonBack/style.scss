@@ -23,7 +23,7 @@
 }
 
 .back-button__icon {
-  transition: transform ease .3s;
+  transition: transform ease 0.3s;
   & > path {
     color: $secondaryColor;
   }

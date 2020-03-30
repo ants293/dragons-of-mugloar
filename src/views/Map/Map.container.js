@@ -3,8 +3,7 @@ import Component from "./Map";
 import { actionRequestStartGame } from "../../actions/GameActions";
 
 const mapStateToProps = (state) => {
-  return {
-  };
+  return {};
 };
 
 const mapDispatchToProps = (dispatch) => {

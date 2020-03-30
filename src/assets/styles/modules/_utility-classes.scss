@@ -1,9 +1,25 @@
-.relative {position: relative}
-.h-full {height: 100%}
-.w-full {width: 100%}
-.bold {font-weight: 700}
+.relative {
+  position: relative;
+}
+.h-full {
+  height: 100%;
+}
+.w-full {
+  width: 100%;
+}
+.bold {
+  font-weight: 700;
+}
 
-.f-size-semilarge {font-size: $fontSizeSemiLarge}
-.f-size-semimedium {font-size: $fontSizeSemiMedium}
-.f-size-medium {font-size: $fontSizeMedium}
-.f-size-small {font-size: $fontSizeSmall}
+.f-size-semilarge {
+  font-size: $fontSizeSemiLarge;
+}
+.f-size-semimedium {
+  font-size: $fontSizeSemiMedium;
+}
+.f-size-medium {
+  font-size: $fontSizeMedium;
+}
+.f-size-small {
+  font-size: $fontSizeSmall;
+}

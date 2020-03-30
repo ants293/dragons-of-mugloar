@@ -10,7 +10,9 @@ function LoseView() {
         <img style={{ height: 300 }} src={loseGif} alt="AAAron" />
       </div>
 
-      <Link to={"/play"} className="generic-link f-size-semilarge mt-3">Back to menu</Link>
+      <Link to={"/play"} className="generic-link f-size-semilarge mt-3">
+        Back to menu
+      </Link>
     </div>
   );
 }

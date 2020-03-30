@@ -13,7 +13,7 @@
   font-weight: 700;
   outline: none;
   cursor: pointer;
-  transition: color ease .3s, background-color ease .3s;
+  transition: color ease 0.3s, background-color ease 0.3s;
   &:focus,
   &:hover,
   &:active {
@@ -44,7 +44,7 @@
   cursor: pointer;
   font-weight: 600;
   text-transform: uppercase;
-  transition: color ease .3s, background-color ease .3s;
+  transition: color ease 0.3s, background-color ease 0.3s;
   &:focus,
   &:hover,
   &:active {
