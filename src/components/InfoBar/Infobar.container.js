@@ -30,6 +30,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     actionRequestStartGame: () => actionRequestStartGame(dispatch),
+    redirect: (path) => dispatch({ to: path, type: "ROUTE" }),
   };
 };
 

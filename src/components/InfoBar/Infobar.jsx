@@ -1,7 +1,9 @@
 import React from "react";
-import "./styles.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PropTypes from "prop-types";
+import ButtonBack from "../Buttons/ButtonBack/ButtonBack";
+
+import "./styles.scss";
 
 const statObject = PropTypes.shape({
   value: PropTypes.number || PropTypes.string,
@@ -9,6 +11,7 @@ const statObject = PropTypes.shape({
 });
 
 Infobar.propTypes = {
+  redirect: PropTypes.func.isRequired,
   relevantStats: PropTypes.shape({
     lives: statObject,
     gold: statObject,
@@ -17,10 +20,14 @@ Infobar.propTypes = {
   }),
 };
 
-function Infobar({ relevantStats }) {
+function Infobar({ relevantStats, redirect }) {
   return (
     <div className="infobar">
-      <div className="container">
+      <div className="container d-flex justify-content-between align-items-center">
+        <ButtonBack
+          onButtonPress={() => redirect("/play")}
+          title={"Back to menu"}
+        />
         <div className="infobar__icons d-flex justify-content-end">
           {getStatisticsWithIconsHTML(relevantStats)}
         </div>
