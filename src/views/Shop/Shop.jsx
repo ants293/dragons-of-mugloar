@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { toast } from "react-toastify";
 import PropTypes from "prop-types";
-
 import MainViewWrapper from "../../components/Wrapper/Wrapper";
+
 import "./style.scss";
 
 ShopView.propTypes = {

@@ -1,6 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function TaskCard({task, onTaskClick}) {
+TaskCard.propTypes = {
+  onTaskClick: PropTypes.func.isRequired,
+  task: PropTypes.shape({
+    reward: PropTypes.number,
+    probability: PropTypes.string,
+    expiresIn: PropTypes.number,
+    message: PropTypes.string,
+  }),
+};
+
+function TaskCard({ task, onTaskClick }) {
   return (
     <div className="col-4 task-card">
       <div className="items-wall__item">
@@ -22,10 +33,7 @@ function TaskCard({task, onTaskClick}) {
         </div>
         <div className="task-card__content mb-3">{task.message}</div>
         <div className="task-card__footer">
-          <button
-            className="main-button"
-            onClick={() => onTaskClick()}
-          >
+          <button className="main-button" onClick={() => onTaskClick()}>
             Do job
           </button>
         </div>

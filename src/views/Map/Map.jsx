@@ -1,6 +1,6 @@
 import React from "react";
-import Infobar from "../../components/InfoBar/Infobar.container";
 import PropTypes from "prop-types";
+import Infobar from "../../components/InfoBar/Infobar.container";
 
 import "./style.scss";
 

@@ -1,5 +1,5 @@
 import {
-  PLAYER_START_GAME,
+  REQUEST_PLAYER_START_GAME,
   PURGE_GAME_INFO,
   UPDATE_GAME_INFO,
 } from "../types/GameTypes";
@@ -16,7 +16,7 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case PLAYER_START_GAME:
+    case REQUEST_PLAYER_START_GAME:
       return {
         ...state,
         ...action.payload,
