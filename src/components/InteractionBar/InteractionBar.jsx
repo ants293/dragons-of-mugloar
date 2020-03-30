@@ -1,8 +1,15 @@
 import React from "react";
-import "./styles.scss";
+import PropTypes from "prop-types";
 import ButtonBack from "../Buttons/ButtonBack/ButtonBack";
 
-function InteractionBar({ title = "", redirect = () => {} }) {
+import "./styles.scss";
+
+InteractionBar.propTypes = {
+  title: PropTypes.string,
+  redirect: PropTypes.func.isRequired,
+};
+
+function InteractionBar({ title = "", redirect }) {
   return (
     <div className="interaction-bar d-flex justify-content-between align-items-baseline">
       <ButtonBack onButtonPress={() => redirect("/")} />

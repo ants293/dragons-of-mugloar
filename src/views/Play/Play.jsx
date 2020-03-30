@@ -1,10 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
+
+PlayView.propTypes = {
+  game: PropTypes.object,
+  actionPurgeGameData: PropTypes.func.isRequired,
+  actionRequestStartGame: PropTypes.func.isRequired,
+  redirect: PropTypes.func.isRequired,
+};
 
 function PlayView({
-  game = null,
-  actionPurgeGameData = () => {},
-  actionRequestStartGame = () => {},
-  redirect = () => {},
+  game = {},
+  actionPurgeGameData,
+  actionRequestStartGame,
+  redirect,
 }) {
   return (
     <div className="container h-full">

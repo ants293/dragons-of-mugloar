@@ -4,17 +4,32 @@
   padding: 15px 10px;
   margin-bottom: 15px;
   min-width: 210px;
-  background-color: $mainBgColor;
+  background-color: transparent;
+  color: $secondaryColor;
   text-transform: uppercase;
-  border: 1px solid $mainColor;
+  border: 2px solid $secondaryColor;
   border-radius: $mainBorderRadius;
   font-size: $fontSizeLarge;
   font-weight: 700;
   outline: none;
   cursor: pointer;
+  transition: color ease .3s, background-color ease .3s;
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $secondaryColor;
+    color: #fff;
+  }
   &.menu-button--disabled {
     color: $disabledColor;
-    background-color: $disabledBgColor;
+    border: 2px solid $disabledColor;
+    &:focus,
+    &:hover,
+    &:active {
+      color: $disabledColor;
+      background-color: transparent;
+      border: 2px solid $disabledColor;
+    }
   }
 }
 

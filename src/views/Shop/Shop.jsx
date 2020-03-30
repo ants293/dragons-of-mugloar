@@ -1,17 +1,24 @@
 import React, { useEffect } from "react";
-import "./style.scss";
-import InteractionBar from "../../components/InteractionBar/InteractionBar.container";
+import { toast } from "react-toastify";
+import PropTypes from "prop-types";
+
 import MainViewWrapper from "../../components/Wrapper/Wrapper";
-import {toast} from "react-toastify";
+import "./style.scss";
+
+ShopView.propTypes = {
+  actionRequestShopBuy: PropTypes.func.isRequired,
+  actionRequestShopList: PropTypes.func.isRequired,
+  shop: PropTypes.shape({ items: PropTypes.array }),
+};
 
 function ShopView({
-  actionRequestShopBuy = () => {},
-  actionRequestShopList = () => {},
+  actionRequestShopBuy,
+  actionRequestShopList,
   shop = { items: [] },
 }) {
   useEffect(() => {
     actionRequestShopList();
-  }, []);
+  }, [actionRequestShopList]);
 
   return (
     <MainViewWrapper title={"Item shop"}>

@@ -1,10 +1,14 @@
 import React from "react";
-import "./style.scss";
 import Infobar from "../../components/InfoBar/Infobar.container";
+import PropTypes from "prop-types";
 
-function MapView(props) {
-  const { redirect } = props;
+import "./style.scss";
 
+MapView.propTypes = {
+  redirect: PropTypes.func.isRequired,
+};
+
+function MapView({ redirect }) {
   return (
     <div className="map relative h-full">
       <Infobar />

@@ -1,8 +1,14 @@
 import React, { Fragment } from "react";
 import InteractionBar from "../InteractionBar/InteractionBar.container";
 import Infobar from "../InfoBar/Infobar.container";
+import PropTypes from "prop-types";
 
-function MainViewWrapper({ children = () => {}, title = "" }) {
+MainViewWrapper.propTypes = {
+  title: PropTypes.string,
+  children: PropTypes.any.isRequired,
+};
+
+function MainViewWrapper({ children, title = "" }) {
   return (
     <Fragment>
       <Infobar />

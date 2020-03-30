@@ -3,18 +3,28 @@ import "./style.scss";
 import MainViewWrapper from "../../components/Wrapper/Wrapper";
 import { toast } from "react-toastify";
 import TaskCard from "./TaskCard/TaskCard";
+import PropTypes from "prop-types";
+
+TaskboardView.propTypes = {
+  actionRequestTaskList: PropTypes.func.isRequired,
+  actionRequestTaskSolving: PropTypes.func.isRequired,
+  tasks: PropTypes.shape({ taskList: PropTypes.array }),
+  lives: PropTypes.number,
+  redirect: PropTypes.func.isRequired,
+  purgePlayerInfo: PropTypes.func.isRequired,
+};
 
 function TaskboardView({
-  actionRequestTaskList = () => {},
-  actionRequestTaskSolving = () => {},
+  actionRequestTaskList,
+  actionRequestTaskSolving,
   tasks = { taskList: [] },
   lives = 3,
-  redirect = () => {},
-  purgePlayerInfo = () => {},
+  redirect,
+  purgePlayerInfo,
 }) {
   useEffect(() => {
     actionRequestTaskList();
-  }, []);
+  }, [actionRequestTaskList]);
 
   useEffect(() => {
     if (lives === 0) {
@@ -64,6 +74,7 @@ const sortTasksByDifficultyAndPrice = (a, b) => {
   if (probabilityLevels[a.probability] < probabilityLevels[b.probability]) {
     return -1;
   }
+
   if (
     probabilityLevels[a.probability] === probabilityLevels[b.probability] &&
     a.reward < b.reward
