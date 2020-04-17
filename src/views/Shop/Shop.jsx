@@ -16,6 +16,7 @@ function ShopView({
   actionRequestShopList,
   shop = { items: [] },
 }) {
+
   useEffect(() => {
     actionRequestShopList();
   }, [actionRequestShopList]);
@@ -29,7 +30,7 @@ function ShopView({
         {shop.items.map((item) => (
           <div
             className="items-list__item"
-            data-testElement="list item"
+            data-testelement="list item"
             key={item.id}
             onClick={() => buyItem(item.id, actionRequestShopBuy, item.name)}
           >

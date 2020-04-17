@@ -1,7 +1,7 @@
 import ShopView from "./Shop";
 import { shallow } from "enzyme";
 import React from "react";
-import { getTestSelector } from "../../setupTests";
+import { getTestSelector } from "../../shared/TestUtilities";
 
 describe("Shop", () => {
   let playerCash = 80;
@@ -40,9 +40,17 @@ describe("Shop", () => {
     />
   );
 
+  var listItem = wrapper.find(getTestSelector("list item"));
+
   it("should render shoppinglist items", () => {
-    var listItem = wrapper.find(getTestSelector("list item"));
     expect(listItem.length).toBe(2);
+  });
+
+  it("should trigger success toast on successful purchase", () => {
+    listItem.at(0).simulate("click");
+  });
+
+  it("should trigger error toast on a failed purchase", () => {
     listItem.at(0).simulate("click");
   });
 });
