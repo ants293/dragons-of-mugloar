@@ -6,19 +6,15 @@ import "./assets/styles/index.scss";
 import { setSiteIcons } from "./shared/SiteIcons";
 import { Router } from "react-router";
 import { history } from "./store/Store";
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SiteToast from "./components/SiteToast/SiteToast";
 
 setSiteIcons();
 
 function App() {
   return (
     <Router history={history}>
-      <ToastContainer
-        autoClose={1000}
-        position="top-center"
-        className="toast-container"
-      />
+      <SiteToast />
       <Routes />
     </Router>
   );

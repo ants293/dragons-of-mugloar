@@ -29,6 +29,7 @@ function ShopView({
         {shop.items.map((item) => (
           <div
             className="items-list__item"
+            data-testElement="list item"
             key={item.id}
             onClick={() => buyItem(item.id, actionRequestShopBuy, item.name)}
           >
